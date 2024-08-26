@@ -853,7 +853,7 @@
             } else {
                 scannerContainer.style.display = 'none';
                 scanButton.style.display = 'block'; // Show the scan button again
-                html5QrCode.stop();
+                html5-qrcode.stop();
             }
         });
 
@@ -862,8 +862,8 @@
             const scanButton = document.getElementById('scan-button');
             scannerContainer.style.display = 'none';
             scanButton.style.display = 'block'; // Show the scan button again
-            if (html5QrCode) {
-                html5QrCode.stop();
+            if (html5-qrcode) {
+                html5-qrcode.stop();
             }
         });
     </script>
