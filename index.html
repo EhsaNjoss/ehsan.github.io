@@ -791,7 +791,7 @@
         </div>
     </div>
 
-    <!-- Barcode Scanner HTML -->
+ <!-- Barcode Scanner HTML -->
     <div id="scanner-container">
         <button class="close-btn" id="close-btn">&times;</button>
         <div id="scanner"></div>
@@ -801,21 +801,10 @@
 
     <!-- Bottom Image -->
     <div class="bottom-image">
-<a href="https://ibb.co/dGXGgF0"><img src="https://i.ibb.co/t8n8XgM/Picsart-24-08-24-13-13-54-526-1.png" alt="Picsart-24-08-24-13-13-54-526-1" border="0"></a><br /><a target='_blank' href='https://nonprofitlight.com/mn/glencoe/glencoe-regional-health-services'></a><br />
-    </div>
-
-    <!-- JavaScript for Barcode Scanner and Modals -->
-  <script 
-    src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+     <a href="https://ibb.co/dGXGgF0"><img src="https://i.ibb.co/t8n8XgM/Picsart-24-08-24-13-13-54-526-1.png" alt="Picsart-24-08-24-13-13-54-526-1" border="0"></a>
+    <!-- JavaScript for Barcode Scanner -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
     <script>
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = 'block';
-        }
-
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
-        }
-
         document.getElementById('scan-button').addEventListener('click', function() {
             const scannerContainer = document.getElementById('scanner-container');
             const resultDiv = document.getElementById('result');
@@ -853,7 +842,7 @@
             } else {
                 scannerContainer.style.display = 'none';
                 scanButton.style.display = 'block'; // Show the scan button again
-                html5-qrcode.stop();
+                html5QrCode.stop();
             }
         });
 
@@ -862,8 +851,8 @@
             const scanButton = document.getElementById('scan-button');
             scannerContainer.style.display = 'none';
             scanButton.style.display = 'block'; // Show the scan button again
-            if (html5-qrcode) {
-                html5-qrcode.stop();
+            if (html5QrCode) {
+                html5QrCode.stop();
             }
         });
     </script>
